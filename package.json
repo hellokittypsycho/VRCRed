@@ -1,0 +1,10 @@
+{
+  "name": "vrchat-chaos-deck",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A local stream control deck for VRChat's official OSC interface",
+  "engines": { "node": ">=24" },
+  "files": ["server.js", "lib/", "public/", "scripts/", "test/", "docs/", "README.md", "Start Chaos Deck.cmd", "Setup Camera.cmd", "Reset Admin Password.cmd"],
+  "scripts": { "start": "node scripts/start.js", "dev": "node --watch server.js", "test": "node --test", "doctor": "node scripts/doctor.js", "package:release": "node scripts/package-release.js", "reset:admin": "node scripts/reset-admin.js", "setup:camera": "node scripts/setup-camera.js" }
+}

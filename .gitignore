@@ -1,0 +1,44 @@
+# Dependencies and local caches
+node_modules/
+.npm/
+.cache/
+.camera-deps/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local credentials, interpreter paths and environment settings
+.env
+.env.*
+!.env.example
+.camera-runtime.json
+.deck-access.json
+
+# Accounts, sessions, invitations, chat and database sidecars
+/data/
+*.sqlite
+*.sqlite-*
+*.sqlite.bak
+*.db
+*.db-wal
+*.db-shm
+*.db-journal
+
+# Logs, test output, screenshots and release archives
+*.log
+coverage/
+/artifacts/
+/releases/
+*.tgz
+
+# Editor and operating-system files
+.idea/
+.vs/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+Desktop.ini

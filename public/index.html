@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0d0e11">
+  <title>Chaos Deck · Live studio</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111115'/%3E%3Cpath d='m26 17 21 15-21 15z' fill='%23ed243b'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" type="module"></script>
+</head>
+<body class="immersive-studio auth-loading">
+<svg class="icon-sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+<symbol id="i-settings" viewBox="0 0 24 24"><path d="m9.5 3-.7 2.1-2 .9-2.1-.4-2 3.5 1.4 1.7v2.3L2.7 15l2 3.5 2.1-.4 2 .9.7 2.1h4l.7-2.1 2-.9 2.1.4 2-3.5-1.4-1.7V11l1.4-1.7-2-3.5-2.1.4-2-.9-.7-2.1z"/><circle cx="11.5" cy="12" r="3"/></symbol>
+<symbol id="i-fullscreen" viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.8 5.7 6.3.9-4.6 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L2.9 9.6l6.3-.9z"/></symbol>
+<symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 7v5h-5M4 17v-5h5"/><path d="M6.1 7a7 7 0 0 1 11.4-1L20 9M4 15l2.5 3A7 7 0 0 0 18 17"/></symbol>
+<symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></symbol>
+<symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5m5-5-5 5 5 5"/></symbol>
+<symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5m-5 5 5-5 5 5"/></symbol>
+<symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+<symbol id="i-edit" viewBox="0 0 24 24"><path d="m15 4 5 5M4 20l5-1L20 8a2.1 2.1 0 0 0-3-3L6 16z"/></symbol>
+<symbol id="i-rotate" viewBox="0 0 24 24"><path d="M20 8a8 8 0 1 0 .3 7M20 3v5h-5"/></symbol>
+<symbol id="i-wiggle" viewBox="0 0 24 24"><path d="M4 7h16M8 3 4 7l4 4m12 6H4m12-4 4 4-4 4"/></symbol>
+<symbol id="i-jump" viewBox="0 0 24 24"><path d="M5 20h14M12 17V4M7 9l5-5 5 5M4 13l2-2m12 0 2 2"/></symbol>
+<symbol id="i-sparkles" viewBox="0 0 24 24"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5zM20 2v4m-2-2h4"/></symbol>
+<symbol id="i-move" viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M9 6l3-3 3 3M9 18l3 3 3-3M6 9l-3 3 3 3m12-6 3 3-3 3"/></symbol>
+<symbol id="i-camera" viewBox="0 0 24 24"><rect x="3" y="6" width="13" height="12" rx="3"/><path d="m16 10 5-3v10l-5-3"/></symbol>
+<symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M5 11v1a7 7 0 0 0 14 0v-1M12 19v3m-4 0h8"/></symbol>
+<symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11.5a8.5 8.5 0 0 1-8.5 8.5 9 9 0 0 1-3.5-.8L3 21l1.8-5a9 9 0 0 1-.8-3.5A8.5 8.5 0 0 1 12.5 4 7.5 7.5 0 0 1 20 11.5Z"/><path d="M8 10h8M8 14h5"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-3a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v3m20 0v-3a4 4 0 0 0-3-3.9"/><circle cx="9" cy="6" r="4"/><path d="M17 2.2a4 4 0 0 1 0 7.6"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+<symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+<symbol id="i-logout" viewBox="0 0 24 24"><path d="M9 4H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h4m6-12 4 4-4 4M9 12h11"/></symbol>
+<symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="8" r="5"/><path d="m12 12 9 9m-3-3 3-3m-6 0 3-3"/></symbol>
+<symbol id="i-link" viewBox="0 0 24 24"><path d="m10 13 4-4m-6 7-1 1a4.2 4.2 0 0 1-6-6l5-5a4.2 4.2 0 0 1 6 0m0 2 1-1a4.2 4.2 0 0 1 6 6l-5 5a4.2 4.2 0 0 1-6 0" transform="translate(1 1)"/></symbol>
+<symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v.1"/></symbol>
+<symbol id="i-play" viewBox="0 0 24 24"><path d="m9 5 11 7-11 7z" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-send" viewBox="0 0 24 24"><path d="m3 3 18 9-18 9 3-9zM6 12h15"/></symbol>
+<symbol id="i-volume" viewBox="0 0 24 24"><path d="M11 5 6 9H3v6h3l5 4z"/><path class="audio-waves" d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/><path class="audio-slash" d="m16 9 5 6m0-6-5 6"/></symbol></svg>
+  <section id="access-screen" class="access-screen" hidden aria-labelledby="access-title">
+    <div class="access-card">
+      <span class="wordmark">CHAOS<span>DECK</span></span>
+      <p class="eyebrow">YOUR PRIVATE STREAM</p>
+      <h1 id="access-title">Welcome back.</h1>
+      <p id="access-description">Sign in to watch and join the conversation.</p>
+      <form id="access-form">
+        <label for="login-username">Username</label><input id="login-username" autocomplete="username" minlength="3" maxlength="24" pattern="[A-Za-z0-9_][A-Za-z0-9_-]{2,23}" title="3–24 letters, numbers, underscores or hyphens. Start with a letter, number or underscore." placeholder="Your username" required>
+        <label for="login-password">Password</label><input id="login-password" type="password" autocomplete="current-password" maxlength="256" placeholder="Enter your password" required>
+        <p id="password-guidance" class="input-guidance" hidden>Use at least 12 characters. A few unrelated words make a memorable password.</p>
+        <div id="confirmation-field" hidden><label for="confirm-password">Confirm password</label><input id="confirm-password" type="password" autocomplete="new-password" maxlength="256" placeholder="One more time"></div>
+        <div id="registration-fields" hidden><label for="invite-code">Invitation code</label><input id="invite-code" autocomplete="off" maxlength="256" placeholder="The code from your host"></div>
+        <div id="setup-fields" hidden><label for="setup-origin">Public HTTPS URL <span class="field-optional">Optional</span></label><input id="setup-origin" type="url" placeholder="https://stream.example.com"><p class="input-guidance">You can add this later in Settings. Leave it empty to start locally.</p></div>
+        <p id="migration-note" class="inline-note" hidden><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-info"/></svg><span>Existing host? Use <strong>admin</strong> and your previous host password.</span></p>
+        <p id="access-error" class="form-message" role="alert"></p>
+        <button class="red-button access-submit" id="access-submit" type="submit">Sign in</button>
+        <button class="text-button access-switch" id="access-switch" type="button">Have an invite? Create an account</button>
+        <button class="secondary-button access-retry" id="access-retry" type="button" hidden>Try again</button>
+        <details id="access-recovery" class="access-recovery"><summary>Forgot your password?</summary><p>Ask the stream host to help you recover access.<span id="recovery-host-note" hidden> If you are the host, run <strong>Reset Admin Password.cmd</strong> on the PC running Chaos Deck. Your saved data will be kept.</span></p></details>
+      </form>
+    </div>
+    <span class="access-footer">A little chaos. Good company.</span>
+  </section>
+
+  <main id="top" class="fullscreen-studio">
+    <section class="camera-card" id="camera-section" aria-label="Live camera studio">
+      <div class="camera-stage" id="camera-stage">
+        <img id="spout-preview" draggable="false" alt="VRChat streaming camera" hidden>
+        <video id="screen-preview" autoplay muted playsinline hidden></video>
+        <header class="topbar player-chrome" id="player-chrome">
+          <span class="wordmark" aria-label="Chaos Deck">CHAOS<span>DECK</span></span>
+          <nav aria-label="Player controls">
+            <button data-admin-only data-open-dialog="avatar-dialog" aria-haspopup="dialog">Avatar</button>
+            <button data-admin-only data-open-dialog="deck-dialog" aria-haspopup="dialog">Effects</button>
+            <button id="chat-toggle" aria-controls="chat-panel" aria-expanded="false">Chat<span id="chat-unread" class="chat-unread" hidden>0</span></button>
+          </nav>
+          <div class="top-actions">
+            <button class="icon-button" id="stream-audio" aria-label="Unmute stream" title="Unmute stream"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path class="audio-waves" d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/><path class="audio-slash" d="m16 9 5 6m0-6-5 6"/></svg></button>
+            <button data-admin-only class="icon-button" data-open-settings aria-haspopup="dialog" aria-label="Open settings" title="Settings"><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-settings"/></svg></button>
+            <button class="icon-button stage-fullscreen" id="camera-fullscreen" hidden aria-label="Fullscreen camera" title="Fullscreen"><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-fullscreen"/></svg></button>
+            <span class="chrome-divider" aria-hidden="true"></span>
+            <button id="account-open" class="account-button" data-open-dialog="account-dialog" aria-haspopup="dialog" aria-label="My account" title="My account">A</button>
+          </div>
+        </header>
+        <aside id="chat-panel" class="chat-panel" hidden aria-label="Live chat">
+          <div class="chat-heading"><div><h2>Live chat</h2><span id="chat-presence">Connecting…</span></div><button id="chat-close" class="icon-button" aria-label="Close chat"><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-close"/></svg></button></div>
+          <div id="chat-messages" role="log" aria-label="Chat messages" aria-live="polite" aria-relevant="additions text"><p class="chat-empty">The chat is yours. Say hello.</p></div>
+          <button id="chat-new" class="chat-new" hidden>New messages <svg class="ui-icon rotate-down" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-up"/></svg></button>
+          <form id="chat-form"><p id="chat-relay-notice" class="chat-relay-notice" hidden>Recent chat appears together above the host in VRChat. Long messages are shortened.</p><label class="sr-only" for="chat-input">Message</label><div class="chat-compose"><textarea id="chat-input" placeholder="Send a message…" rows="2" maxlength="500" required></textarea><button id="chat-send" type="submit" aria-label="Send message" title="Send message"><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-up"/></svg></button></div><div class="chat-compose-note"><span id="chat-as"></span><span id="chat-count">0 / 500</span></div><p id="chat-error" class="form-message" role="status"></p></form>
+        </aside>
+        <div id="camera-empty"><span class="offline-icon"><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-camera"/></svg></span><h3>Stream offline</h3><p id="camera-empty-message">Your host will be live soon.</p><button data-admin-only class="primary-button" id="camera-connect"><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-play"/></svg>Start stream</button></div>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="avatar-dialog" class="studio-modal avatar-modal" aria-labelledby="avatar-title">
+    <header class="modal-header"><div class="modal-title"><h2 id="avatar-title">Avatar controls</h2><span class="pill neutral" id="parameter-count">0 CONTROLS</span></div><button class="icon-button close-button" data-close-dialog="avatar-dialog" aria-label="Close avatar options" title="Close"><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-close"/></svg></button></header>
+    <section class="avatar-catalog" id="avatar-section">
+      <div class="catalog-toolbar">
+        <div data-admin-only class="avatar-toolbar"><span class="avatar-mark"><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-sparkles"/></svg></span><label class="sr-only" for="avatar-select">Avatar configuration</label><select id="avatar-select"><option value="">Choose your avatar</option></select><button data-admin-only class="icon-button" id="rescan" aria-label="Rescan avatars" title="Rescan avatars"><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-refresh"/></svg></button></div>
+        <span id="current-avatar-name" class="friend-avatar-name" hidden></span>
+        <div class="search-row"><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-search"/></svg><label class="sr-only" for="parameter-search">Search parameters</label><input id="parameter-search" placeholder="Find a control…" type="search"><button id="favorites-filter" class="favorites-filter" aria-pressed="false" title="Show favorites"><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><span>Favorites</span></button></div>
+      </div>
+      <div id="control-categories" class="control-categories" role="group" aria-label="Control categories"></div>
+      <div id="parameters" class="parameter-list"></div>
+      <div class="empty-state" id="avatar-empty"><span class="empty-symbol"><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-search"/></svg></span><h3>Your avatar is up next.</h3><p>Choose an avatar to discover its controls.</p><span class="mono subtle">WAITING FOR AVATAR</span></div>
+      <div class="catalog-pagination"><button id="previous-controls" class="secondary-button" hidden><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-left"/></svg>Previous</button><span id="results-count"></span><button id="load-more-controls" class="secondary-button" hidden>Next<svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-right"/></svg></button></div>
+      <div class="card-footer"><span id="command-result" role="status">Choose a control to get started.</span><button id="restore" class="text-button" data-admin-only data-control><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-rotate"/></svg>Restore changes</button></div>
+      <details data-admin-only class="advanced-section"><summary>Advanced controls<svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chevron"/></svg></summary><div class="advanced-controls"><span id="hidden-count"></span><label class="settings-checkbox"><input type="checkbox" id="show-internals">Show internals</label></div><details class="custom-parameter"><summary>Custom parameter<svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chevron"/></svg></summary><p class="fine-print">Use the exact OSC parameter name from your avatar.</p><form id="custom-form"><label>Parameter name<input id="custom-name" placeholder="e.g. HatToggle" maxlength="200" required></label><label>Type<select id="custom-type"><option>Bool</option><option>Int</option><option>Float</option></select></label><label>Value<input id="custom-value" value="true" required></label><button type="submit" class="red-button" data-control>Send<svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-right"/></svg></button></form></details></details>
+    </section>
+  </dialog>
+
+  <dialog id="deck-dialog" class="studio-modal deck-modal" aria-labelledby="deck-title">
+    <header class="modal-header"><div><h2 id="deck-title">Make a little chaos.</h2><p class="section-description">Quick cues for the stream.</p></div><button class="icon-button close-button" data-close-dialog="deck-dialog" aria-label="Close director's deck" title="Close"><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-close"/></svg></button></header>
+    <section class="director-deck" id="controls">
+      <div class="section-actions"><button class="secondary-button" id="movement-open"><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-move"/></svg><span class="button-label">Movement</span></button><button class="red-button" id="surprise-cue" data-control><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-sparkles"/></svg>Surprise me</button></div>
+      <div class="preset-grid compact-cues">
+        <button class="preset" data-preset="spin" data-control><span class="cue-icon"><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-rotate"/></svg></span><span class="cue-copy"><strong>Spin</strong><small>A 2-second turn</small></span><span class="cue-play"><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-right"/></svg></span></button>
+        <button class="preset" data-preset="wiggle" data-control><span class="cue-icon"><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wiggle"/></svg></span><span class="cue-copy"><strong>Wiggle</strong><small>Eight side steps</small></span><span class="cue-play"><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-right"/></svg></span></button>
+        <button class="preset" data-preset="hops" data-control><span class="cue-icon"><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-jump"/></svg></span><span class="cue-copy"><strong>Bunny hop</strong><small>Three quick jumps</small></span><span class="cue-play"><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-right"/></svg></span></button>
+        <button class="preset" data-preset="emote" data-control><span class="cue-icon"><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-sparkles"/></svg></span><span class="cue-copy"><strong>Emote</strong><small>Your avatar’s first slot</small></span><span class="cue-play"><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-right"/></svg></span></button>
+      </div>
+      <div class="preset-status"><span id="preset-indicator" class="status-dot"></span><span id="preset-status">All cues ready</span><span class="cue-note">Each cue stops automatically.</span></div>
+    </section>
+  </dialog>
+
+  <dialog id="movement-dialog" class="studio-drawer movement-drawer" aria-labelledby="movement-title">
+    <header class="drawer-heading"><div><p class="eyebrow">AVATAR CONTROLS</p><h2 id="movement-title">Movement</h2></div><button class="icon-button close-button" data-close-dialog="movement-dialog" aria-label="Close movement controls" title="Close"><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-close"/></svg></button></header>
+    <p class="drawer-description">Hold to move. Release to stop.</p>
+    <label class="hotkey-label toggle-row"><span>Keyboard controls<small>WASD · Q / E · Space · Shift</small></span><input type="checkbox" id="hotkeys" aria-label="Keyboard controls" class="toggle-input"></label>
+    <div class="dpad">
+      <button class="move turn" data-move="turnLeft" data-control aria-label="Turn left"><svg class="ui-icon rotate-left" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-rotate"/></svg><kbd>Q</kbd></button>
+      <button class="move" data-move="forward" data-control aria-label="Move forward"><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-up"/></svg><kbd>W</kbd></button>
+      <button class="move turn" data-move="turnRight" data-control aria-label="Turn right"><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-rotate"/></svg><kbd>E</kbd></button>
+      <button class="move" data-move="left" data-control aria-label="Move left"><svg class="ui-icon rotate-left" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-up"/></svg><kbd>A</kbd></button>
+      <button class="move" data-move="back" data-control aria-label="Move backward"><svg class="ui-icon rotate-down" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-up"/></svg><kbd>S</kbd></button>
+      <button class="move" data-move="right" data-control aria-label="Move right"><svg class="ui-icon rotate-right" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-up"/></svg><kbd>D</kbd></button>
+    </div>
+    <div class="movement-bottom"><button class="utility-move" data-move="jump" data-control><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-jump"/></svg>Jump<kbd>Space</kbd></button><button class="utility-move" data-move="run" data-control><svg class="ui-icon rotate-right" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-up"/></svg>Run<kbd>Shift</kbd></button></div>
+    <p class="inline-note"><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-info"/></svg><span>Movement depends on the world. VR turning may snap instead of rotating smoothly.</span></p>
+  </dialog>
+
+  <dialog id="settings-dialog" class="studio-drawer settings-drawer" aria-labelledby="settings-title">
+    <header class="drawer-heading"><div><p class="eyebrow">CONTROL ROOM</p><h2 id="settings-title">Stream settings</h2></div><button class="icon-button close-button" data-close-dialog="settings-dialog" aria-label="Close studio settings" title="Close"><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-close"/></svg></button></header>
+    <button class="text-button settings-help-button" data-open-dialog="help-dialog"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-info"/></svg>Help &amp; setup</button>
+    <section data-admin-only class="camera-settings-menu settings-section" aria-labelledby="camera-settings-title">
+      <div class="settings-section-heading"><h3 id="camera-settings-title"><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-camera"/></svg>Camera</h3><span id="camera-status" class="status-pill">Offline</span></div><p id="camera-help" class="camera-help">Connect your in-game camera.</p>
+      <div class="field-grid"><label for="camera-fps">Frame rate<select id="camera-fps" aria-label="Stream FPS"><option value="15">15 FPS</option><option value="30">30 FPS</option><option value="60" selected>60 FPS</option></select></label><label for="camera-resolution">Resolution<select id="camera-resolution" aria-label="Stream resolution"><option value="720">720p HD</option><option value="1080" selected>1080p Full HD</option></select></label></div>
+      <label class="settings-field" for="camera-sender">Camera source<select id="camera-sender"><option value="">Auto-select VRChat camera</option></select></label>
+      <label id="camera-flip-label" class="toggle-row" hidden><span>Flip vertically</span><input type="checkbox" id="camera-flip" class="toggle-input"></label>
+      <div class="audio-settings"><h3><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mic"/></svg>Audio</h3><label class="toggle-row"><span>VRChat audio<small id="game-audio-help">Game sound and in-game voices</small></span><input id="audio-game" aria-label="VRChat audio" aria-describedby="game-audio-help" class="toggle-input" type="checkbox" checked></label><label class="toggle-row"><span>My microphone<small id="mic-audio-help">Let the stream hear you</small></span><input id="audio-mic" aria-label="My microphone" aria-describedby="mic-audio-help" class="toggle-input" type="checkbox" checked></label><label class="settings-field" for="audio-device">Microphone<select id="audio-device"><option value="">Windows default microphone</option></select></label><button class="text-button" id="audio-refresh"><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-refresh"/></svg>Refresh microphones</button><p id="audio-status" class="connection-note">Audio starts with the stream.</p></div>
+      <div class="stream-actions"><button class="red-button" id="camera-apply">Start stream</button><button class="secondary-button danger-quiet" id="camera-stop" hidden>Disconnect camera</button></div>
+    </section>
+    <section data-admin-only class="settings-section chat-relay-settings" aria-labelledby="chat-relay-title"><h3 id="chat-relay-title"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chat"/></svg>Stream chat</h3><label class="toggle-row"><span>Relay chat to VRChat<small>Show a rolling feed above your avatar</small></span><input id="chat-relay-enabled" type="checkbox" class="toggle-input" aria-label="Relay chat to VRChat" aria-describedby="chat-relay-help"></label><pre class="chat-relay-preview" aria-label="Example VRChat chat feed">STREAM CHAT&#10;Mosa › Hello guys!&#10;Nis › Hey!&#10;Alex › Boop!</pre><p id="chat-relay-help" class="fine-print">Up to 3 recent messages together, oldest to newest. Updates every 3 seconds as chat arrives. Long lines share the 144-character limit. OSC must be enabled in VRChat.</p><p id="chat-relay-status" class="form-message" role="status"></p></section>
+    <details data-admin-only class="connection-settings settings-section"><summary><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-link"/></svg>Connection<svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chevron"/></svg></summary><div class="connection-row"><span class="bridge-status"><span class="status-dot" id="bridge-dot"></span><span id="bridge-label">Connecting</span></span></div><div class="settings-target"><span>Destination</span><strong class="mono" id="destination">127.0.0.1:9000</strong></div><label class="settings-field" for="osc-port">VRChat receive port<input type="number" id="osc-port" min="1" max="65535" value="9000"></label><div class="connection-row"><span>Feedback</span><strong id="feedback-label">Waiting for VRChat</strong></div><div class="connection-row"><span id="packet-label">OSC packets sent</span><strong class="mono" id="packet-count">0000</strong></div><p class="inline-note"><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-info"/></svg><span>In VRChat: <strong>Action Menu → OSC → Enabled.</strong></span></p><p class="fine-print" id="feedback-help">Feedback listens locally on port 9001.</p></details>
+    <details data-admin-only class="sharing-settings settings-section"><summary><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-users"/></svg>Sharing &amp; access<svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chevron"/></svg></summary><form id="origin-form"><label class="settings-field" for="public-origin">Public HTTPS URL<input id="public-origin" type="url" placeholder="https://stream.example.com"></label><button class="secondary-button" type="submit">Save URL</button></form><p class="fine-print">Save the exact HTTPS address that friends will open, without a path. Leave empty for local access only. Share the address with an invitation code.</p></details><button data-admin-only class="secondary-button manage-accounts-button" data-open-dialog="accounts-dialog"><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-users"/></svg>Manage accounts &amp; invites<svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-right"/></svg></button>
+    <details data-admin-only class="activity-card settings-section"><summary><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-info"/></svg>Recent activity<svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chevron"/></svg></summary><div id="activity" aria-live="polite"></div></details>
+  </dialog>
+
+  <dialog id="account-dialog" class="studio-modal account-modal" aria-labelledby="account-title">
+    <header class="modal-header"><h2 id="account-title">Your account</h2><button class="icon-button close-button" data-close-dialog="account-dialog" aria-label="Close my account" title="Close"><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-close"/></svg></button></header>
+    <div class="account-identity"><span id="account-avatar" class="profile-avatar">A</span><div><strong id="account-name"></strong><span id="account-role" class="role-badge"></span></div></div>
+    <label class="toggle-row"><span>Fit full camera frame<small>Show the entire view with letterboxing</small></span><input type="checkbox" id="camera-fit" aria-label="Fit full camera frame" class="toggle-input"></label>
+    <details class="password-section"><summary><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-key"/></svg>Change password<svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chevron"/></svg></summary><form id="password-form"><label for="current-password">Current password</label><input id="current-password" type="password" autocomplete="current-password" maxlength="256" required><label for="new-password">New password</label><input id="new-password" type="password" autocomplete="new-password" minlength="12" maxlength="256" placeholder="At least 12 characters" required><label for="new-password-confirm">Confirm new password</label><input id="new-password-confirm" type="password" autocomplete="new-password" minlength="12" maxlength="256" required><button type="submit" class="red-button">Update password</button><p id="password-status" class="form-message" role="status"></p></form></details>
+    <button class="text-button sign-out-button" id="sign-out"><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-logout"/></svg>Sign out</button>
+    <button class="text-button account-help-button" data-open-dialog="help-dialog"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-info"/></svg>Help &amp; setup</button>
+  </dialog>
+
+  <dialog id="accounts-dialog" class="studio-modal accounts-modal" aria-labelledby="accounts-title">
+    <header class="modal-header"><div><p class="eyebrow">YOUR CIRCLE</p><h2 id="accounts-title">Accounts &amp; invites</h2></div><button class="icon-button close-button" data-close-dialog="accounts-dialog" aria-label="Close account management" title="Close"><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-close"/></svg></button></header>
+    <p class="accounts-description">Viewers watch and chat. Admins can also control the avatar and manage the stream.</p>
+    <section class="invite-section"><h3>Invite someone in</h3><form id="invite-form"><label>Invite name<input id="invite-label" placeholder="e.g. Friday stream" maxlength="60"></label><label>Uses<input id="invite-uses" type="number" min="1" max="100" value="1" required></label><label>Expires<select id="invite-days"><option value="1">1 day</option><option value="7" selected>7 days</option><option value="30">30 days</option></select></label><button type="submit" class="red-button"><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-plus"/></svg>Create invite</button></form><div id="created-invite" class="created-invite" hidden><div><p>Invitation ready</p><small>Copy this code before closing the menu.</small></div><div class="invite-code-row"><code id="created-invite-code"></code><button id="copy-invite" class="secondary-button" type="button"><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-copy"/></svg><span>Copy</span></button></div></div><div id="invite-list"></div></section>
+    <section class="accounts-section"><div class="section-label"><h3>Members</h3><button id="accounts-refresh" class="icon-button" aria-label="Refresh accounts" title="Refresh accounts"><svg class="ui-icon " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-refresh"/></svg></button></div><div id="accounts-list"></div></section><p id="accounts-status" class="form-message" role="status"></p>
+  </dialog>
+
+  <dialog id="rename-dialog" class="studio-modal rename-modal" aria-labelledby="rename-title"><header class="modal-header"><h2 id="rename-title">Name this control</h2><button class="icon-button close-button" data-close-dialog="rename-dialog" aria-label="Close rename control"><svg class="ui-icon" aria-hidden="true"><use href="#i-close"/></svg></button></header><p class="section-description">Choose a name you’ll recognize on stream. Leave it empty to use the original name.</p><form id="rename-form"><label for="rename-input">Display name</label><input id="rename-input" maxlength="80" autocomplete="off"><div class="rename-actions"><button class="secondary-button" id="rename-cancel" type="button">Cancel</button><button class="red-button" type="submit">Save name</button></div></form></dialog>
+  <dialog id="help-dialog" class="studio-modal help-modal" aria-labelledby="help-title">
+    <header class="modal-header"><div><p class="eyebrow">GET COMFORTABLE</p><h2 id="help-title">Help &amp; setup</h2></div><button class="icon-button close-button" data-close-dialog="help-dialog" aria-label="Close help" title="Close"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-close"/></svg></button></header>
+    <section data-admin-only class="host-help"><h3>Get your stream ready</h3><p id="help-stream-summary" class="section-description">Follow these steps on the PC running VRChat.</p>
+      <ol class="setup-checklist">
+        <li><span class="setup-step-number" aria-hidden="true">1</span><div class="setup-step-heading"><strong>Install the camera receiver</strong><span id="help-receiver" class="setup-state">Checking</span></div><p>Run <strong>Setup Camera.cmd</strong> once. It needs 64-bit Python 3.12 or 3.13. Viewers only need a browser.</p></li>
+        <li><span class="setup-step-number" aria-hidden="true">2</span><div class="setup-step-heading"><strong>Connect the in-game camera</strong><span id="help-source" class="setup-state">Checking</span></div><p>In VRChat, enable <strong>Camera → Stream → Spout Stream</strong>. Open this panel’s Settings, choose your audio inputs, then select <strong>Start stream</strong>.</p></li>
+        <li><span class="setup-step-number" aria-hidden="true">3</span><div class="setup-step-heading"><strong>Load your avatar controls</strong><span id="help-avatar" class="setup-state">Checking</span></div><p>Enable <strong>Action Menu → OSC → Enabled</strong> in VRChat. Wear a published avatar, then open <strong>Avatar</strong>. Use the refresh icon if it is missing. Effects depend on what the avatar supports.</p></li>
+        <li><span class="setup-step-number" aria-hidden="true">4</span><div class="setup-step-heading"><strong>Invite your friends</strong><span id="help-sharing" class="setup-state">Checking</span></div><p>Save your public HTTPS URL in <strong>Settings → Sharing &amp; access</strong>. Create an invitation under <strong>Manage accounts &amp; invites</strong>, then share the URL and invitation code. New members can watch and chat; only admins control the stream.</p></li>
+      </ol><div class="help-actions"><button class="red-button" data-open-dialog="settings-dialog">Open stream settings</button><button class="secondary-button" data-open-dialog="accounts-dialog">Manage invitations</button></div>
+    </section>
+    <section class="watch-help"><h3>Watching &amp; chatting</h3><p>Use the speaker button to hear the stream. Controls fade while you watch—move your pointer or tap to bring them back. Open Chat to join the conversation; Enter sends a message and Shift+Enter adds a new line.</p><p>Stream offline? Your host has not started broadcasting yet. If a live stream drops, the player reconnects automatically.</p><p>Open your profile to change your password or show the entire camera frame. Your sign-in is saved for up to 30 days.</p></section>
+    <details data-admin-only class="help-troubleshooting"><summary>Something still isn’t working?</summary><p><strong>Camera setup:</strong> run <code>npm run doctor</code> in the project folder to check the installation. For missing Python, install a 64-bit 3.12 or 3.13 version, then run Setup Camera.cmd again.</p><p><strong>No avatar reaction:</strong> check that OSC is enabled and the selected configuration matches the avatar you are wearing. “Sent” means the packet was sent; “VRChat confirmed” means feedback matched.</p><p><strong>Friends cannot open the panel:</strong> keep the server and tunnel running, save the exact public HTTPS address, and check the host’s upload speed and tunnel allowance.</p><p><strong>Save your data:</strong> stop the server and back up the <code>data</code> folder. To reset an admin password, run Reset Admin Password.cmd. Keep the database.</p></details>
+  </dialog>
+  <div id="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>
